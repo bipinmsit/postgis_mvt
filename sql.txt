@@ -1,0 +1,16 @@
+-- Get the extent at zoom 10 with x=512 & y=512
+SELECT TileBBox(10, 512, 512, 4326);
+
+-- Get the EPSG of a table
+SELECT ST_SRID(geom) AS epsg_code FROM ne_10m_land;
+
+-- Check if features are there between above bounding box and the feature layer
+SELECT COUNT(*)
+FROM ne_10m_land
+WHERE geom && TileBBox(10, 512, 512, 4326);
+
+-- Get the extent of the layer
+SELECT ST_Extent(geom) FROM ne_10m_land;
+
+-- Get the extent in WKT Format
+SELECT ST_AsText(TileBBox(12, 1024, 1024, 4326));
