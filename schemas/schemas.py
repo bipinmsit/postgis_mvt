@@ -8,7 +8,6 @@ class PolygonCreate(BaseModel):
 
 class PolygonRead(PolygonCreate):
     id: int
-    properties: Dict[str, Any]  # Storing properties as a dictionary
 
     class Config:
-        orm_mode = True
+        from_attributes = True

@@ -1,0 +1,22 @@
+{
+  "geojson": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [30.0, 10.0],
+          [40.0, 40.0],
+          [20.0, 40.0],
+          [10.0, 20.0],
+          [30.0, 100.0]
+        ]
+      ]
+    },
+    "properties": {
+      "name": "Updated Polygon",
+      "color": "red",
+      "area": 600.0
+    }
+  }
+}
