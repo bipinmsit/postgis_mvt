@@ -1,6 +1,6 @@
 # Database configuration
 DB_CONFIG = {
-    "dbname": "gis_dev",
+    "dbname": "gis_db",
     "user": "postgres",
     "password": "postgres",
     "host": "localhost",

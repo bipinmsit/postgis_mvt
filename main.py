@@ -12,7 +12,7 @@ app = FastAPI(debug=True)
 
 origins = [
     "http://localhost",
-    "http://localhost:8000",
+    "http://localhost:3000",
 ]
 
 # Add CORS Policy middleware
@@ -24,8 +24,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# app.include_router(mvt.router)
+app.include_router(mvt_api.router)
 app.include_router(crud_api.router)
-
-
-
